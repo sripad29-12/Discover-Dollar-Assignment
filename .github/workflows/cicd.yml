@@ -20,15 +20,14 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build & push backend image
-  run: |
-    docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest ./crud-dd-task-mean-app/backend
-    docker push ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest ./crud-dd-task-mean-app/crud-dd-task-mean-app/backend
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
 
-    - name: Build & push frontend image
-  run: |
-    docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest ./crud-dd-task-mean-app/frontend
-    docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
-
+      - name: Build & push frontend image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest ./crud-dd-task-mean-app/crud-dd-task-mean-app/frontend
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
 
   deploy:
     needs: build-and-push
@@ -42,7 +41,7 @@ jobs:
           username: ${{ secrets.VM_USER }}
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
-            cd /home/ubuntu/app/Discover-Dollar-Assignment/crud-dd-task-mean-app
+            cd /home/ubuntu/app/Discover-Dollar-Assignment/crud-dd-task-mean-app/crud-dd-task-mean-app
             docker-compose pull
             docker-compose down
             docker-compose up -d

@@ -20,14 +20,15 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build & push backend image
-        run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest ./crud-dd-task-mean-app/crud-dd-task-mean-app/backend
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
+  run: |
+    docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest ./crud-dd-task-mean-app/backend
+    docker push ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest
 
       - name: Build & push frontend image
-        run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest ./crud-dd-task-mean-app/crud-dd-task-mean-app/frontend
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
+  run: |
+    docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest ./crud-dd-task-mean-app/frontend
+    docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
+
 
   deploy:
     needs: build-and-push

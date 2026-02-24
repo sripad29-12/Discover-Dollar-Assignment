@@ -35,3 +35,20 @@ Step-5 Creating Nginx reverse proxy:
 - Write the workflow and map the routes.
 - Make necessary changes inside docker-compose.yml to map the port.
 - The application is now accessible on the single port.
+
+<img width="1877" height="807" alt="Screenshot 2026-02-24 152111" src="https://github.com/user-attachments/assets/55a189a8-54bf-4758-8a16-e961341db5ee" />
+
+<img width="1851" height="577" alt="deploy 1" src="https://github.com/user-attachments/assets/5e0477e6-7aa2-4651-af48-8334651b97fc" />
+
+<img width="1839" height="781" alt="Screenshot 2026-02-24 152358" src="https://github.com/user-attachments/assets/5489c271-4780-40d5-a956-34db8e17d079" />
+
+<img width="1800" height="407" alt="deploy3" src="https://github.com/user-attachments/assets/aef6621d-e45b-478b-850f-7774b5be0227" />
+
+<img width="1890" height="808" alt="ui1" src="https://github.com/user-attachments/assets/455a2c97-ac73-4ce9-8e6a-e9ffca5c343c" />
+
+<img width="1886" height="692" alt="Screenshot 2026-02-24 152621" src="https://github.com/user-attachments/assets/4daf74bd-f001-40a8-9dbf-0f219f9df879" />
+
+
+
+
+

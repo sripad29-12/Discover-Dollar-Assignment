@@ -22,16 +22,15 @@ services:
     build:
       context: ./frontend
     expose:
-      - "80"   # only exposed to Docker network, not host
+      - "80"
     depends_on:
       - backend
 
   nginx:
-    image: nginx:latest
+    image: nginx:alpine
     container_name: nginx
-    restart: always
     ports:
-      - "80:80"   # public port
+      - "80:80"
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./frontend/dist/angular-15-crud:/usr/share/nginx/html
